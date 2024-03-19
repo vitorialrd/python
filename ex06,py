@@ -1,0 +1,16 @@
+e = str(input('Enter an expression: '))
+exp = []
+
+for s in e:
+    if s == '(':
+        exp.append('(')
+    elif s == ')':
+        if len(exp) > 0:
+            exp.pop()
+        else:
+            exp.append(')')
+            break
+if len(exp) == 0:
+    print("Your expression is correct")
+else:
+    print("Your expression is not correct")
